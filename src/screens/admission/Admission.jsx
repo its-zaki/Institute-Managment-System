@@ -2,6 +2,7 @@ import { Box, TextField, Button, Typography, InputLabel, Select, MenuItem } from
 import logo from '../../assets/images/logo.svg'
 import React, { useRef, useState } from 'react'
 import FormControl from '@mui/material/FormControl';
+import { Link } from 'react-router-dom';
 
 const Admission = () => {
   // useState 
@@ -86,6 +87,8 @@ const Admission = () => {
         <Box> <TextField className="address-inp" id="Address" label="Address" variant="filled" inputRef={PasswordRef} required />
         </Box>
         <Button type='submit' variant="contained" className='fw-bold fs-5' >Register</Button>
+        <p className='para text-center'><span ><Link className='para-content' to='/'>Already Have An Account?</Link></span> in SMIT</p>
+
 
       </form>
 

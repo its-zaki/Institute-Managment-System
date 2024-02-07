@@ -8,6 +8,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/material/IconButton';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   // usestate 
@@ -35,7 +36,7 @@ const Login = () => {
   return (
 
     <Box className='login-box d-flex justify-content-center  '>
-      <form onSubmit={Login} sx={{ height: '50%' }} className='login-form d-flex flex-column justify-content-center  w-25 gap-5 shadow p-3 mb-5  rounded  '>
+      <form onSubmit={Login} sx={{ height: '50%' }} className='login-form d-flex flex-column justify-content-center  w-25 gap-5 shadow p-3   rounded  '>
         <Box className="header d-flex justify-content-center ">
         <div>
             <span className="login-icon material-symbols-outlined">
@@ -73,8 +74,10 @@ const Login = () => {
         </FormControl>
 
         <Button type='submit' variant="contained">Login</Button>
+        <p className='para text-center'><span ><Link className='para-content' to='/admission'>Don't Have An Account?</Link></span> in SMIT</p>
 
       </form>
+
 
 
     </Box >

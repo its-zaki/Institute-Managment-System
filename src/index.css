@@ -2,14 +2,14 @@
     height: 100vh;
     align-items: center;
     background-image: url(https://media.istockphoto.com/id/643190486/photo/wintertime-view-from-mt-titlis-in-switzerland.jpg?s=612x612&w=0&k=20&c=ouF1LTrUJ33Jr1Lvhplgdaj4gumJrOnBuBtBdRnZJX8=);
-    background-size: no-repeat;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .login-form{
-    height: 70%;
+    height: 80%;
     width: 80%;
     margin: 30px;
+    margin-bottom: 0px;
     background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(16px)
 
@@ -23,6 +23,20 @@
 .login-head{
     /* color: #1976d2; */
     color: #ffffff;
+}
+.para{
+ margin-top: -30px;
+ letter-spacing: 1px;
+ color: #1976d2;
+ font-family: sans-serif;
+ font-weight: bold;
+}
+.para-content{
+    text-decoration: none;
+    color: #1976d2;
+}
+.para-content:hover{
+    text-decoration: underline;
 }
 /* addmission section */
 
@@ -55,7 +69,6 @@
 
 .admission-box {
     background-image: url(https://media.istockphoto.com/id/1170124850/photo/fish-tail-mountain-peak-in-himalayas-nepal.webp?s=170667a&w=0&k=20&c=u1DAQmMF6eguXYdU7E8vKc0ABcurIBc0f0KLyb7LFSc=);
-    background-size: no-repeat;
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
 }
