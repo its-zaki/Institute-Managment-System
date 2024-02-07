@@ -9,7 +9,7 @@ const RouterConfig = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="admin-dashboard" element={<AdminDashboard />} />
+        <Route path="admin-dashboard/*" element={<AdminDashboard />} />
         <Route path="admission" element={<Addmission/>} />
         <Route path="student" element={<Student/>} />
       </Routes>
