@@ -65,12 +65,12 @@ const Admission = () => {
               <MenuItem value={10}>Web Development</MenuItem>
               <MenuItem value={20}>Web Design</MenuItem>
               <MenuItem value={30}>AI Chatbot</MenuItem>
-              <MenuItem value={30}>English</MenuItem>
+              <MenuItem value={30}>English Learning</MenuItem>
             </Select>
           </FormControl>
           {/* second select input  */}
           <FormControl className='add-input'>
-            <InputLabel id="demo-simple-select-label">Courses</InputLabel>
+            <InputLabel id="demo-simple-select-label">Gender</InputLabel>
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
@@ -78,16 +78,16 @@ const Admission = () => {
               label="Courses"
               onChange={handleChange}
             >
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={10}>Male</MenuItem>
+              <MenuItem value={20}>Female</MenuItem>
             </Select>
           </FormControl>
 
         </Box>
-        <Box> <TextField className="address-inp" id="Address" label="Address" variant="filled" inputRef={PasswordRef} required />
+        <Box> <TextField className="address-inp add-input" id="Address" label="Address" variant="filled" inputRef={PasswordRef} required />
         </Box>
         <Button type='submit' variant="contained" className='fw-bold fs-5' >Register</Button>
-        <p className='para text-center'><span ><Link className='para-content' to='/'>Already Have An Account?</Link></span> in SMIT</p>
+        <p className='para text-center'><span ><Link className='para-content' to='/'>Already Have An Account?</Link></span> In SMIT</p>
 
 
       </form>

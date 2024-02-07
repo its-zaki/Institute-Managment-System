@@ -74,7 +74,7 @@ const Login = () => {
         </FormControl>
 
         <Button type='submit' variant="contained">Login</Button>
-        <p className='para text-center'><span ><Link className='para-content' to='/admission'>Don't Have An Account?</Link></span> in SMIT</p>
+        <p className='para text-center'><span ><Link className='para-content' to='/admission'>Don't Have An Account?</Link></span> In SMIT</p>
 
       </form>
 

@@ -62,6 +62,10 @@
     width: 48%;
     /* margin-right: 48px; */
 }
+.add-input:hover {
+    outline: solid 1px #0080ff;
+    /* border-color: #1976d2;   */
+}
 
 .address-inp {
     width: 100%;
