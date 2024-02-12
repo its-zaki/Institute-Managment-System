@@ -1,43 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* app bar  */
+.appbar-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.appbar-pic:hover {
+    cursor: pointer;
+
+}
+
+/* login section */
+
 .login-box {
+
     height: 100vh;
     align-items: center;
     background-image: url(https://media.istockphoto.com/id/643190486/photo/wintertime-view-from-mt-titlis-in-switzerland.jpg?s=612x612&w=0&k=20&c=ouF1LTrUJ33Jr1Lvhplgdaj4gumJrOnBuBtBdRnZJX8=);
     background-size: cover;
     background-repeat: no-repeat;
 }
-.login-form{
+
+.login-form {
     height: 80%;
     width: 80%;
     margin: 30px;
     margin-bottom: 0px;
     background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(16px)
-
 }
-.login-icon{
+
+.login-icon {
     font-size: 4rem;
-    /* color: #1976d2; */
     color: #ffffff;
 
 }
-.login-head{
-    /* color: #1976d2; */
+
+.login-head {
     color: #ffffff;
 }
-.para{
- margin-top: -30px;
- letter-spacing: 1px;
- color: #1976d2;
- font-family: sans-serif;
- font-weight: bold;
+
+.para {
+    margin-top: -30px;
+    letter-spacing: 1px;
+    color: #1976d2;
+    font-family: sans-serif;
+    font-weight: bold;
 }
-.para-content{
+
+.para-content {
     text-decoration: none;
     color: #1976d2;
 }
-.para-content:hover{
+
+.para-content:hover {
     text-decoration: underline;
 }
+
 /* addmission section */
 
 .addmission-form {
@@ -62,6 +86,7 @@
     width: 48%;
     /* margin-right: 48px; */
 }
+
 .add-input:hover {
     outline: solid 1px #0080ff;
     /* border-color: #1976d2;   */
@@ -75,4 +100,182 @@
     background-image: url(https://media.istockphoto.com/id/1170124850/photo/fish-tail-mountain-peak-in-himalayas-nepal.webp?s=170667a&w=0&k=20&c=u1DAQmMF6eguXYdU7E8vKc0ABcurIBc0f0KLyb7LFSc=);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* add course section  */
+.add-course-box {
+    height: 100vh;
+    align-items: center;
+    background-image: url(https://media.istockphoto.com/id/643190486/photo/wintertime-view-from-mt-titlis-in-switzerland.jpg?s=612x612&w=0&k=20&c=ouF1LTrUJ33Jr1Lvhplgdaj4gumJrOnBuBtBdRnZJX8=);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.add-course-form {
+    height: 90%;
+    margin: 30px;
+    margin-top: 0PX;
+    margin-bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px)
+}
+
+.add-course-head {
+    color: #ffffff;
+    padding: 10px;
+}
+
+.add-course-icon {
+    font-size: 2rem;
+    padding-top: 15px;
+    color: #ffffff;
+}
+
+.add-course-input {
+    width: 100%;
+}
+
+.all-student-box {
+    height: 100%;
+    width: 100%;
+    /* background-image: url(https://media.istockphoto.com/id/643190486/photo/wintertime-view-from-mt-titlis-in-switzerland.jpg?s=612x612&w=0&k=20&c=ouF1LTrUJ33Jr1Lvhplgdaj4gumJrOnBuBtBdRnZJX8=);
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+.all-students-header {
+    margin: 25px;
+    border-radius: 5px;
+    /* background-color: #43a5fb; */
+
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+
+    background-image: url(https://media.istockphoto.com/id/643190486/photo/wintertime-view-from-mt-titlis-in-switzerland.jpg?s=612x612&w=0&k=20&c=ouF1LTrUJ33Jr1Lvhplgdaj4gumJrOnBuBtBdRnZJX8=);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 95%;
+    z-index: 1;
+    /* height: 100%; */
+}
+
+.all-students-header2 {
+    width: 95%;
+    height: 50px;
+    margin: 25px;
+    margin-top: 120px;
+    background-color: #1976d2;
+    border-radius: 5px;
+    position: fixed;
+    z-index: 1;
+}
+
+.all-student-head {
+    color: #000;
+    padding: 20px;
+}
+
+.all-student-head2 {
+    color: #ffffff;
+    padding: 8px;
+}
+
+.all-students-icon {
+    font-size: 3rem;
+    padding-top: 15px;
+    color: #000;
+}
+
+.all-student-content {
+    height: 100%;
+    margin: 25px;
+    margin-top: 200px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+    background-image: url(https://media.istockphoto.com/id/643190486/photo/wintertime-view-from-mt-titlis-in-switzerland.jpg?s=612x612&w=0&k=20&c=ouF1LTrUJ33Jr1Lvhplgdaj4gumJrOnBuBtBdRnZJX8=);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+
+}
+
+.all-student-list {
+    margin: 30px;
+
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+
+    
+}
+.all-student-list:hover{ 
+    background-color: rgba(255, 255, 255, 0.719);
+    backdrop-filter: blur(16px);
+    
+}
+
+.all-student-icon {
+    margin-top: 20px;
+}
+
+.all-student-icon:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.student-pic {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.student-pic:hover {
+    border: 2px solid #ffffff;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* All courses section */
+.all-courses-content{
+    height: 100%;
+    margin: 25px;
+    margin-top: 130px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+    background-image: url(https://media.istockphoto.com/id/643190486/photo/wintertime-view-from-mt-titlis-in-switzerland.jpg?s=612x612&w=0&k=20&c=ouF1LTrUJ33Jr1Lvhplgdaj4gumJrOnBuBtBdRnZJX8=);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+
+}
+
+.all-courses-list{
+    margin: 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+}
+/* single student section  */
+.single-students-header{
+    margin: 25px;
+    margin-top: 100px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+    background-image: url(https://media.istockphoto.com/id/643190486/photo/wintertime-view-from-mt-titlis-in-switzerland.jpg?s=612x612&w=0&k=20&c=ouF1LTrUJ33Jr1Lvhplgdaj4gumJrOnBuBtBdRnZJX8=);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 95%;
+    z-index: 1;
+}
+.single-students-content{
+    height: 100%;
+    margin: 25px;
+    margin-top: 280px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+    background-image: url(https://media.istockphoto.com/id/643190486/photo/wintertime-view-from-mt-titlis-in-switzerland.jpg?s=612x612&w=0&k=20&c=ouF1LTrUJ33Jr1Lvhplgdaj4gumJrOnBuBtBdRnZJX8=);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
 }

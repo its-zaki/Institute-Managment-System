@@ -1,5 +1,4 @@
 import { Box, TextField, Button, Typography } from '@mui/material'
-import logo from '../../assets/images/logo.svg'
 import React, { useRef } from 'react'
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
@@ -9,6 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { Link } from 'react-router-dom';
+import { loginUser } from '../../config/firebase/Firebase-Methods';
 
 const Login = () => {
   // usestate 
@@ -18,10 +18,28 @@ const Login = () => {
   const PasswordRef = useRef()
 
   // login func
-  const Login =(e)=>{
-    e.preventDefault()
-    console.log(EmailRef.current.value);
-    console.log(PasswordRef.current.value);
+  const Login =(event)=>{
+    event.preventDefault()
+    // console.log(EmailRef.current.value);
+    // console.log(PasswordRef.current.value);
+    
+    const data = new FormData(event.currentTarget);
+    // console.log(data.get('email'));
+    // console.log(data.get('password'));
+
+
+    loginUser({
+      
+           email: data.get('email'),
+      password: data.get('password'),
+    })
+  .then((res)=>{
+    console.log(res);
+
+  }).catch((err)=>{
+    console.log(err);
+  })
+    // console.log('login sucessfully');
 
   }
   // show pass 
@@ -31,6 +49,7 @@ const Login = () => {
     event.preventDefault();
   };
   // show pass end
+
 
 
   return (
@@ -43,19 +62,19 @@ const Login = () => {
               school
             </span>
           </div>
-          <div>
+          <div> 
             <Typography varient='h1' className='login-head fs-3 text-center m-1  mt-3 font-bold fw-bold  ' sx={{ marginRight: '30px' }}> SMIT</Typography>
 
           </div>
          </Box>
         
-        <TextField id="email" label="Email" variant="outlined"  inputRef={EmailRef}/>
+        <TextField id="email" label="Email" variant="outlined"  inputRef={EmailRef} required/>
 
 
         <FormControl sx={{  width: '100%' }} variant="outlined">
           <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
           <OutlinedInput
-            id="outlined-adornment-password" inputRef={PasswordRef}
+            id="outlined-adornment-password" inputRef={PasswordRef} required 
             type={showPassword ? 'text' : 'password'}
             endAdornment={
               <InputAdornment position="end">

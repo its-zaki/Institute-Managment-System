@@ -16,8 +16,12 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import Groups2Icon from '@mui/icons-material/Groups2';
+import addStudentIcon from '../assets/images/6.jpg'
+import LibraryAddIcon from '@mui/icons-material/LibraryAdd';
+import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
+import dp from '../assets/images/6.jpg'
 import { useNavigate } from 'react-router-dom';
 
 
@@ -67,9 +71,9 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-end',
 }));
 
-export default function PersistentDrawerLeft({screens}) {
+export default function PersistentDrawerLeft({ screens }) {
 
-    const Navigate = useNavigate()
+  const Navigate = useNavigate()
 
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -82,24 +86,24 @@ export default function PersistentDrawerLeft({screens}) {
     setOpen(false);
   };
 
-//   goToSpecificTask 
-  const goToSpecificTask = (text)=>{
-    if(text === 'Add Course'){
-        Navigate('/admin-dashboard')
-        // console.log('add course');
-        return
+  //   goToSpecificTask 
+  const goToSpecificTask = (text) => {
+    if (text === 'Add Course') {
+      Navigate('/admin-dashboard')
+      // console.log('add course');
+      return
     }
-    if(text === 'All Students'){
-        Navigate('/admin-dashboard/allstudent')
-        // console.log('all student');
-        return
+    if (text === 'All Students') {
+      Navigate('/admin-dashboard/allstudent')
+      // console.log('all student');
+      return
     }
-    if(text === 'All Courses'){
-        Navigate('/admin-dashboard/allcourses')
-        // console.log('all course');
-        return
+    if (text === 'All Courses') {
+      Navigate('/admin-dashboard/allcourses')
+      // console.log('all course');
+      return
     }
-    
+
   }
 
   return (
@@ -116,13 +120,31 @@ export default function PersistentDrawerLeft({screens}) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Persistent drawer
-          </Typography>
+          <Box className='d-flex justify-content-between w-100 m-2'>
+            <Box>
+              <Typography className='mt-2' variant="h6" noWrap component="div">
+                Admin Dashboard
+              </Typography>
+            </Box>
+            <Box>
+             
+              <div className="dropdown">
+                <img className="appbar-pic mt-0 cursor-pointer  dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" src={dp} alt="dp" />
+                 
+                
+                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a className="dropdown-item" href="#">Logout</a></li>
+                  
+                </ul>
+              </div>
+            </Box>
+          </Box>
+
         </Toolbar>
       </AppBar>
       <Drawer
         sx={{
+         
           width: drawerWidth,
           flexShrink: 0,
           '& .MuiDrawer-paper': {
@@ -133,6 +155,7 @@ export default function PersistentDrawerLeft({screens}) {
         variant="persistent"
         anchor="left"
         open={open}
+        
       >
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
@@ -145,17 +168,17 @@ export default function PersistentDrawerLeft({screens}) {
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index === 0 ? < LibraryAddIcon /> : index === 1 ? < Groups2Icon /> : <LocalLibraryIcon />}
                 </ListItemIcon>
-                <ListItemText primary={text} onClick={()=>goToSpecificTask(text)}/>
+                <ListItemText primary={text} onClick={() => goToSpecificTask(text)} />
               </ListItemButton>
             </ListItem>
           ))}
         </List>
         <Divider />
-       
+
       </Drawer>
-      <Main open={open}>
+      <Main open={open} className='p-0'>
         <DrawerHeader />
         {screens}
       </Main>
